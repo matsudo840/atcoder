@@ -1,8 +1,14 @@
-# 実行ファイル
+# 実行ファイル系
+*.bin
 *.out
 *.exe
 test
+
+# CPHのキャッシュや設定
+.cph/
+
+# Mac特有のファイル
 .DS_Store
 
-# ライブラリ本体（GitHubには上げない）
+# ライブラリ本体
 ac-library/

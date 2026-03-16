@@ -1,0 +1,8 @@
+# 実行ファイル
+*.out
+*.exe
+test
+.DS_Store
+
+# ライブラリ本体（GitHubには上げない）
+ac-library/

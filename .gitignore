@@ -3,6 +3,7 @@
 *.out
 *.exe
 test
+chrome
 
 # CPHのキャッシュや設定
 .cph/
@@ -12,3 +13,5 @@ test
 
 # ライブラリ本体
 ac-library/
+atcoder_fixed.jar
+chrome

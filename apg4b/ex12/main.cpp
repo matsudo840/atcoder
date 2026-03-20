@@ -17,6 +17,21 @@ int main()
   cin.tie(nullptr);
 
   // ここから記述
+  string S;
+  cin >> S;
 
+  int result = 1;
+  rep(i, S.size())
+  {
+    if (S.at(i) == '+')
+    {
+      result++;
+    }
+    else if (S.at(i) == '-')
+    {
+      result--;
+    }
+  }
+  cout << result << endl;
   return 0;
 }

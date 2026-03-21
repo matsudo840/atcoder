@@ -1,22 +1,33 @@
 #include <bits/stdc++.h>
-#include <atcoder/all>
-
 using namespace std;
-using namespace atcoder;
-
-// 型エイリアス（Pythonの int/float の感覚に近づける）
-using ll = long long;
-using mint = modint998244353;
-#define rep(i, n) for (int i = 0; i < (int)(n); i++)
-#define all(v) v.begin(), v.end()
 
 int main()
 {
-  // 入出力の高速化（Pythonの sys.stdin.readline 的なやつ）
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
+  int N, S;
+  cin >> N >> S;
+  vector<int> A(N), P(N);
+  for (int i = 0; i < N; i++)
+  {
+    cin >> A.at(i);
+  }
+  for (int i = 0; i < N; i++)
+  {
+    cin >> P.at(i);
+  }
 
-  // ここから記述
+  // リンゴ・パイナップルをそれぞれ1つずつ購入するとき合計S円になるような買い方が何通りあるか
+  // ここにプログラムを追記
+  int r = 0;
 
-  return 0;
+  for (int i = 0; i < N; i++)
+  {
+    for (int j = 0; j < N; j++)
+    {
+      if (A.at(i) + P.at(j) == S)
+      {
+        r++;
+      }
+    }
+  }
+  cout << r << endl;
 }

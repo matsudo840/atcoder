@@ -16,7 +16,24 @@ int main()
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
+  string result = "NO";
+
   // ここから記述
+  vector<int> data(5);
+  for (int i = 0; i < 5; i++)
+  {
+    cin >> data.at(i);
+  }
+
+  rep(i, 4)
+  {
+    if (data.at(i) == data.at(i + 1))
+    {
+      result = "YES";
+    }
+  }
+
+  cout << result << endl;
 
   return 0;
 }

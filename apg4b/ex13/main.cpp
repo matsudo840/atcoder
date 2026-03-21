@@ -18,5 +18,22 @@ int main()
 
   // ここから記述
 
-  return 0;
+  int N;
+  cin >> N;
+
+  vector<int> vec(N);
+
+  int S = 0;
+  rep(i, N)
+  {
+    cin >> vec.at(i);
+    S += vec.at(i);
+  };
+
+  int mean = S / N;
+
+  rep(i, N)
+  {
+    cout << abs(mean - vec.at(i)) << endl;
+  };
 }

@@ -16,7 +16,10 @@ int main()
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
 
-  // ここから記述
+  int A, B, C;
+  cin >> A >> B >> C;
+
+  cout << max(A, max(B, C)) - min(A, min(B, C)) << endl;
 
   return 0;
 }

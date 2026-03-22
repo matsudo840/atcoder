@@ -43,5 +43,11 @@ int main()
 
   // ここから記述
 
+  string s;
+  cin >> s;
+  bitset<3> b(s);
+
+  cout << b.count() << endl;
+
   return 0;
 }

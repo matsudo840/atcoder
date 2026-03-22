@@ -43,5 +43,25 @@ int main()
 
   // ここから記述
 
+  int N;
+  cin >> N;
+
+  int result = 999999999;
+  int A;
+  rep(i, N)
+  {
+    cin >> A;
+
+    int c = 0;
+    while (A % 2 == 0)
+    {
+      c += 1;
+      A /= 2;
+    }
+    chmin(result, c);
+  }
+
+  cout << result << endl;
+
   return 0;
 }

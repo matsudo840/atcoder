@@ -43,5 +43,13 @@ int main()
 
   // ここから記述
 
+  int a, b, c;
+  cin >> a >> b >> c;
+
+  string s;
+  cin >> s;
+
+  cout << a + b + c << " " << s << endl;
+
   return 0;
 }

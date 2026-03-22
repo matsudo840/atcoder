@@ -1,22 +1,61 @@
 #include <bits/stdc++.h>
-#include <atcoder/all>
-
 using namespace std;
-using namespace atcoder;
 
-// 型エイリアス（Pythonの int/float の感覚に近づける）
-using ll = long long;
-using mint = modint998244353;
-#define rep(i, n) for (int i = 0; i < (int)(n); i++)
-#define all(v) v.begin(), v.end()
+// 参照渡しを用いて、呼び出し側の変数の値を変更する
+void saiten(vector<vector<int>> &A, int &correct_count, int &wrong_count)
+{
+  for (int i = 0; i < 9; i++)
+  {
+    for (int j = 0; j < 9; j++)
+    {
+      if (A.at(i).at(j) == (i + 1) * (j + 1))
+      {
+        correct_count += 1;
+      }
+      else
+      {
+        wrong_count += 1;
+        A.at(i).at(j) = (i + 1) * (j + 1);
+      }
+    }
+  }
+}
 
+// -------------------
+// ここから先は変更しない
+// -------------------
 int main()
 {
-  // 入出力の高速化（Pythonの sys.stdin.readline 的なやつ）
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
+  // A君の回答を受け取る
+  vector<vector<int>> A(9, vector<int>(9));
+  for (int i = 0; i < 9; i++)
+  {
+    for (int j = 0; j < 9; j++)
+    {
+      cin >> A.at(i).at(j);
+    }
+  }
 
-  // ここから記述
+  int correct_count = 0; // ここに正しい値のマスの個数を入れる
+  int wrong_count = 0;   // ここに誤った値のマスの個数を入れる
 
-  return 0;
+  // A, correct_count, wrong_countを参照渡し
+  saiten(A, correct_count, wrong_count);
+
+  // 正しく修正した表を出力
+  for (int i = 0; i < 9; i++)
+  {
+    for (int j = 0; j < 9; j++)
+    {
+      cout << A.at(i).at(j);
+      if (j < 8)
+        cout << " ";
+      else
+        cout << endl;
+    }
+  }
+  // 正しいマスの個数を出力
+  cout << correct_count << endl;
+  // 誤っているマスの個数を出力
+  cout << wrong_count << endl;
 }

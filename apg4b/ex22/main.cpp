@@ -17,6 +17,25 @@ int main()
   cin.tie(nullptr);
 
   // ここから記述
+  int N;
+  cin >> N;
+
+  vector<tuple<int, int>> data(N);
+  rep(i, N)
+  {
+    int a, b;
+    cin >> a >> b;
+    data.at(i) = make_tuple(b, a);
+  }
+
+  sort(data.begin(), data.end());
+
+  rep(i, N)
+  {
+    int a, b;
+    tie(b, a) = data.at(i);
+    cout << a << " " << b << endl;
+  }
 
   return 0;
 }

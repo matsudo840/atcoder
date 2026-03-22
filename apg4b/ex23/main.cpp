@@ -17,6 +17,37 @@ int main()
   cin.tie(nullptr);
 
   // ここから記述
+  int N;
+  cin >> N;
+
+  map<int, int> r;
+
+  int A;
+  rep(i, N)
+  {
+    cin >> A;
+    if (r.count(A))
+    {
+      r[A] += 1;
+    }
+    else
+    {
+      r[A] = 1;
+    }
+  }
+
+  int rk = 0, rv = 0;
+  for (auto p : r)
+  {
+    int k = p.first, v = p.second;
+    if (rv < v)
+    {
+      rk = k;
+      rv = v;
+    }
+  }
+
+  cout << rk << ' ' << rv << endl;
 
   return 0;
 }

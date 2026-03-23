@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include <atcoder/all>
-
 using namespace std;
 using namespace atcoder;
 
@@ -10,38 +9,44 @@ using mint = modint998244353;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 #define all(v) v.begin(), v.end()
 
-// aよりもbが大きいならばaをbで更新する
-// (更新されたならばtrueを返す)
-template <typename T>
-bool chmax(T &a, const T &b)
-{
-  if (a < b)
-  {
-    a = b; // aをbで更新
-    return true;
-  }
-  return false;
-}
-// aよりもbが小さいならばaをbで更新する
-// (更新されたならばtrueを返す)
-template <typename T>
-bool chmin(T &a, const T &b)
-{
-  if (a > b)
-  {
-    a = b; // aをbで更新
-    return true;
-  }
-  return false;
-}
-
 int main()
 {
-  // 入出力の高速化（Pythonの sys.stdin.readline 的なやつ）
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
+  int N;
+  cin >> N;
 
-  // ここから記述
+  vector<int> T(N + 1);
+  vector<int> X(N + 1);
+  vector<int> Y(N + 1);
 
-  return 0;
+  T.at(0) = 0;
+  X.at(0) = 0;
+  Y.at(0) = 0;
+
+  rep(i, N)
+  {
+    int t, x, y;
+    cin >> t >> x >> y;
+    T.at(i + 1) = t;
+    X.at(i + 1) = x;
+    Y.at(i + 1) = y;
+  }
+
+  reverse(all(T));
+  reverse(all(X));
+  reverse(all(Y));
+
+  rep(i, N)
+  {
+    int t_delta = T.at(i) - T.at(i + 1);
+    int x_delta = abs(X.at(i) - X.at(i + 1));
+    int y_delta = abs(Y.at(i) - Y.at(i + 1));
+
+    if (!(t_delta >= x_delta + y_delta && t_delta % 2 == (x_delta + y_delta) % 2))
+    {
+      cout << "No" << endl;
+      return 0;
+    }
+  }
+
+  cout << "Yes" << endl;
 }

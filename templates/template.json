@@ -1,0 +1,20 @@
+{
+  "task": {
+    "program": ["main.cpp", "main.py"],
+    "submit": "main.cpp",
+    "testdir": "test",
+    "cmd": "g++-15 -O2 -I /Users/matsudo840/repo/atcoder/ac-library main.cpp"
+  },
+  "files": [
+    {
+      "alias": "main.cpp",
+      "path": "main.cpp",
+      "symlink": false
+    },
+    {
+      "alias": "main.py",
+      "path": "main.py",
+      "symlink": false
+    }
+  ]
+}

@@ -42,6 +42,24 @@ int main()
   cin.tie(nullptr);
 
   // ここから記述
+  int N, A, B;
+  cin >> N >> A >> B;
+
+  int r = 0;
+  for (int n_ = 1; n_ <= N; n_++)
+  {
+    int res = 0;
+    int n = n_;
+    while (n > 0)
+    {
+      res += n % 10;
+      n /= 10;
+    }
+    if (A <= res && res <= B)
+      r += n_;
+  }
+
+  cout << r << endl;
 
   return 0;
 }

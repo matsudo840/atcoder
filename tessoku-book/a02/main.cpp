@@ -11,9 +11,22 @@ using mint = modint998244353;
 
 int main()
 {
+    bool flg = false;
 
+    int N, X;
+    cin >> N >> X;
 
+    rep(i, N)
+    {
+        int a;
+        cin >> a;
 
+        if (a == X)
+            flg = true;
+    }
 
-
+    if (flg)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
 }

@@ -11,9 +11,22 @@ using mint = modint998244353;
 
 int main()
 {
+    int D, N;
+    cin >> D >> N;
 
+    vector<int> vec(100009);
+    int L, R;
+    for (int i = 1; i <= N; i++)
+    {
+        cin >> L >> R;
+        vec.at(L) += 1;
+        vec.at(R + 1) -= 1;
+    }
 
-
-
-
+    vector<int> attendee(100009);
+    for (int i = 1; i <= D; i++)
+    {
+        attendee.at(i) = attendee.at(i - 1) + vec.at(i);
+        cout << attendee.at(i) << endl;
+    }
 }

@@ -11,9 +11,9 @@ using mint = modint998244353;
 
 int main()
 {
+    int N;
+    cin >> N;
 
-
-
-
-
+    bitset<10> bs(N);
+    cout << bs << endl;
 }

@@ -12,8 +12,36 @@ using mint = modint998244353;
 int main()
 {
 
+    int N, K;
+    cin >> N >> K;
 
+    vector<int> P(N);
+    vector<int> Q(N);
+    rep(i, N)
+    {
+        int p;
+        cin >> p;
+        P.at(i) = p;
+    }
+    rep(i, N)
+    {
+        int q;
+        cin >> q;
+        Q.at(i) = q;
+    }
 
+    bool flg = false;
+    rep(i, N)
+    {
+        rep(j, N)
+        {
+            if (P.at(i) + Q.at(j) == K)
+                flg = true;
+        }
+    }
 
-
+    if (flg)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
 }

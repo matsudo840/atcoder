@@ -1,4 +1,4 @@
-# My AtCoder Playground
+# AtCoder
 
 AtCoderで問題を解くためのリポジトリです。
 

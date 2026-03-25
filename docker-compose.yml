@@ -1,0 +1,13 @@
+services:
+  atcoder:
+    build: .
+    volumes:
+      - .:/workspace
+      - atcoder-cli-config:/root/.config/atcoder-cli-nodejs
+      - online-judge-tools-config:/root/.config/online-judge-tools
+    tty: true
+    stdin_open: true
+
+volumes:
+  atcoder-cli-config:
+  online-judge-tools-config:

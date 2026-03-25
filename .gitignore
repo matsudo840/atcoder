@@ -1,3 +1,6 @@
+# AtCoder CLI のセッション情報（クッキー等）
+atcoder-cli-nodejs/
+
 # 実行ファイル系
 *.bin
 *.out

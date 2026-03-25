@@ -1,73 +1,76 @@
 # AtCoder
 
-AtCoderで問題を解くためのリポジトリです。
+This repository is for solving problems on AtCoder.
 
-## 📁 ディレクトリ構造
+## 🔗 Profile
+- [AtCoder: matsudo840](https://atcoder.jp/users/matsudo840)
 
-解いている問題集や学習記録など：
+## 📁 Directory Structure
 
-- `abs/`: [AtCoder Beginners Selection](https://atcoder.jp/contests/abs) (初心者向け10問)
-- `apg4b/`: [C++入門講座 (APG4B)](https://atcoder.jp/contests/APG4B)
-- `tessoku-book/`: [競技プログラミングの鉄則](https://atcoder.jp/contests/tessoku-book)
-- `ac-library/`: [AtCoder Library (ACL)](https://github.com/atcoder/ac-library) ※Git管理外
-- `templates/`: コードの雛形 (`main.cpp`, `main.py`)
-- `practice/`: 雑多な練習用コード
-- その他、コンテストごとにディレクトリを作成
+Collections of problems and learning records:
 
-## 🛠️ 私の開発環境 & セットアップ
+- `abs/`: [AtCoder Beginners Selection](https://atcoder.jp/contests/abs) (10 introductory problems)
+- `apg4b/`: [C++ Introduction Course (APG4B)](https://atcoder.jp/contests/APG4B)
+- `tessoku-book/`: [The Essentials of Competitive Programming (Tessoku-book)](https://atcoder.jp/contests/tessoku-book)
+- `ac-library/`: [AtCoder Library (ACL)](https://github.com/atcoder/ac-library) *Excluded from Git tracking
+- `templates/`: Code templates (`main.cpp`, `main.py`)
+- `practice/`: Miscellaneous practice code
+- Other directories are created per contest.
 
-もし他の環境でこのリポジトリを再現したり、参考にしたりする場合の手順です。
+## 🛠️ My Development Environment & Setup
 
-### 1. ツール構成
-- **言語**: C++23 (GCC), Python 3.11+ (uv)
-- **ライブラリ**: [ac-library (C++)](https://github.com/atcoder/ac-library), [ac-library-python](https://github.com/not522/ac-library-python)
-- **CLI**: `atcoder-cli (acc)` + `online-judge-tools (oj)`
+Steps to reproduce or reference this environment in other setups.
 
-### 2. ライブラリのセットアップ (重要)
-`ac-library` は `.gitignore` で除外されているため、手動でクローンまたはダウンロードが必要です。
+### 1. Tool Configuration
+- **Languages**: C++23 (GCC), Python 3.11+ (uv)
+- **Libraries**: [ac-library (C++)](https://github.com/atcoder/ac-library), [ac-library-python](https://github.com/not522/ac-library-python)
+- **CLI Tools**: `atcoder-cli (acc)` + `online-judge-tools (oj)`
+
+### 2. Library Setup (Important)
+Since `ac-library` is excluded via `.gitignore`, you need to clone or download it manually.
 
 ```bash
-# プロジェクトルートで実行
+# Execute at the project root
 git clone https://github.com/atcoder/ac-library.git
 ```
 
-### 3. セットアップ (Docker利用の場合)
-Dockerを使うと、コンパイラやCLIツールがすべて揃った環境がすぐに立ち上がります。
+### 3. Setup (Using Docker)
+Using Docker allows you to quickly start an environment with all compilers and CLI tools ready.
 
 ```bash
-# ビルド & 起動
+# Build & Run
 docker-compose build
 docker-compose run atcoder bash
 ```
 
-### 4. セットアップ (ローカルの場合)
-macOSなどで直接動かす場合：
+### 4. Setup (Local)
+For running directly on macOS or similar environments:
 1. `brew install gcc node uv`
 2. `npm install -g atcoder-cli`
 3. `uv pip install online-judge-tools`
-4. `atcoder-cli-nodejs/config.json` を参考に `acc` の設定を確認
+4. Check `acc` configuration referring to `atcoder-cli-nodejs/config.json`.
 
 
-## 📖 使い方 (ワークフロー)
+## 📖 Usage (Workflow)
 
-新しい問題に取り組む際の基本的な流れ：
+Basic flow when starting a new problem:
 
-1. **問題の取得**
+1. **Fetch Problems**
    ```bash
-   # 例: abc300 を作成
+   # Example: Create directory for abc300
    acc new abc300
    cd abc300/a
    ```
 
-2. **回答を書く**
-   `main.cpp` または `main.py` を編集します。テンプレートは `templates/` にあります。
+2. **Write Solution**
+   Edit `main.cpp` or `main.py`. Templates are located in `templates/`.
 
-3. **テスト & 提出**
+3. **Test & Submit**
    ```bash
-   acc test    # サンプルテスト実行
-   acc submit  # 提出 AtCoder側の制限でsubmitが失敗することがあるので、その場合はGUIから提出する
+   acc test    # Run sample tests
+   acc submit  # Submit solution. If submission fails due to AtCoder's restrictions, submit via the web GUI.
    ```
 
-## 💡 備忘録
-- C++のテンプレートでは `ac-library` を相対パス (`../../ac-library`) でインクルードするように設定しています。
-- Python環境は `uv` で管理しており、`ac-library-python` をインストール済みです。
+## 💡 Notes
+- C++ templates are configured to include `ac-library` via relative paths (`../../ac-library`).
+- The Python environment is managed with `uv`, and `ac-library-python` is already installed.

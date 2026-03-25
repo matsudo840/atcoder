@@ -11,9 +11,26 @@ using mint = modint998244353;
 
 int main()
 {
+    int N, X;
+    cin >> N >> X;
 
+    vector<int> A(100009);
+    for (int i = 1; i <= N; i++)
+        cin >> A.at(i);
 
+    int L = 1, R = N;
+    int M;
 
+    while (A.at(M) != X)
+    {
+        M = (L + R) / 2;
+        if (A.at(M) < X)
+            L = M + 1;
+        else if (A.at(M) == X)
+            break;
+        else if (A.at(M) > X)
+            R = M - 1;
+    }
 
-
+    cout << M << endl;
 }

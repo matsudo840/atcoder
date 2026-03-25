@@ -33,7 +33,7 @@ Since `ac-library` is excluded via `.gitignore`, you need to clone or download i
 git clone https://github.com/atcoder/ac-library.git
 ```
 
-### 3. Setup
+### 3. Setup (Docker)
 Using Docker allows you to quickly start an environment with all compilers and CLI tools ready.
 
 ```bash

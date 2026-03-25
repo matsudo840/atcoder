@@ -6,10 +6,6 @@ AtCoderで問題を解くためのリポジトリです。
 
 解いている問題集や学習記録など：
 
-## 📁 ディレクトリ構造
-
-解いている問題集や学習記録など：
-
 - `abs/`: [AtCoder Beginners Selection](https://atcoder.jp/contests/abs) (初心者向け10問)
 - `apg4b/`: [C++入門講座 (APG4B)](https://atcoder.jp/contests/APG4B)
 - `tessoku-book/`: [競技プログラミングの鉄則](https://atcoder.jp/contests/tessoku-book)
@@ -17,8 +13,6 @@ AtCoderで問題を解くためのリポジトリです。
 - `templates/`: コードの雛形 (`main.cpp`, `main.py`)
 - `practice/`: 雑多な練習用コード
 - その他、コンテストごとにディレクトリを作成
-
----
 
 ## 🛠️ 私の開発環境 & セットアップ
 

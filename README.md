@@ -16,7 +16,7 @@ Collections of problems and learning records:
 - `practice/`: Miscellaneous practice code
 - Other directories are created per contest.
 
-## Setup
+## Setup environment
 
 Steps to reproduce or reference this environment in other setups.
 
@@ -25,7 +25,7 @@ Steps to reproduce or reference this environment in other setups.
 - **Libraries**: [ac-library (C++)](https://github.com/atcoder/ac-library), [ac-library-python](https://github.com/not522/ac-library-python)
 - **CLI Tools**: `atcoder-cli (acc)` + `online-judge-tools (oj)`
 
-### 2. Library Setup (Important)
+### 2. Library Setup
 Since `ac-library` is excluded via `.gitignore`, you need to clone or download it manually.
 
 ```bash
@@ -33,7 +33,7 @@ Since `ac-library` is excluded via `.gitignore`, you need to clone or download i
 git clone https://github.com/atcoder/ac-library.git
 ```
 
-### 3. Setup (Using Docker)
+### 3. Setup
 Using Docker allows you to quickly start an environment with all compilers and CLI tools ready.
 
 ```bash

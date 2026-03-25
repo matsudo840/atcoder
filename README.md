@@ -2,7 +2,7 @@
 
 This repository is for solving problems on AtCoder.
 
-[AtCoder: matsudo840](https://atcoder.jp/users/matsudo840)
+[AtCoder profile: matsudo840](https://atcoder.jp/users/matsudo840)
 
 ## Directory Structure
 

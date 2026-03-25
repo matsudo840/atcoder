@@ -2,10 +2,9 @@
 
 This repository is for solving problems on AtCoder.
 
-## 🔗 Profile
-- [AtCoder: matsudo840](https://atcoder.jp/users/matsudo840)
+[AtCoder: matsudo840](https://atcoder.jp/users/matsudo840)
 
-## 📁 Directory Structure
+## Directory Structure
 
 Collections of problems and learning records:
 
@@ -17,7 +16,7 @@ Collections of problems and learning records:
 - `practice/`: Miscellaneous practice code
 - Other directories are created per contest.
 
-## 🛠️ My Development Environment & Setup
+## Setup
 
 Steps to reproduce or reference this environment in other setups.
 
@@ -51,7 +50,7 @@ For running directly on macOS or similar environments:
 4. Check `acc` configuration referring to `atcoder-cli-nodejs/config.json`.
 
 
-## 📖 Usage (Workflow)
+## Usage
 
 Basic flow when starting a new problem:
 
@@ -71,6 +70,6 @@ Basic flow when starting a new problem:
    acc submit  # Submit solution. If submission fails due to AtCoder's restrictions, submit via the web GUI.
    ```
 
-## 💡 Notes
+## Notes
 - C++ templates are configured to include `ac-library` via relative paths (`../../ac-library`).
 - The Python environment is managed with `uv`, and `ac-library-python` is already installed.

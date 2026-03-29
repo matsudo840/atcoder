@@ -2,10 +2,9 @@
 
 This repository is for solving problems on AtCoder.
 
-## 🔗 Profile
-- [AtCoder: matsudo840](https://atcoder.jp/users/matsudo840)
+[AtCoder profile: matsudo840](https://atcoder.jp/users/matsudo840)
 
-## 📁 Directory Structure
+## Directory Structure
 
 Collections of problems and learning records:
 
@@ -17,7 +16,7 @@ Collections of problems and learning records:
 - `practice/`: Miscellaneous practice code
 - Other directories are created per contest.
 
-## 🛠️ My Development Environment & Setup
+## Setup environment
 
 Steps to reproduce or reference this environment in other setups.
 
@@ -26,7 +25,7 @@ Steps to reproduce or reference this environment in other setups.
 - **Libraries**: [ac-library (C++)](https://github.com/atcoder/ac-library), [ac-library-python](https://github.com/not522/ac-library-python)
 - **CLI Tools**: `atcoder-cli (acc)` + `online-judge-tools (oj)`
 
-### 2. Library Setup (Important)
+### 2. Library Setup
 Since `ac-library` is excluded via `.gitignore`, you need to clone or download it manually.
 
 ```bash
@@ -34,7 +33,7 @@ Since `ac-library` is excluded via `.gitignore`, you need to clone or download i
 git clone https://github.com/atcoder/ac-library.git
 ```
 
-### 3. Setup (Using Docker)
+### 3. Setup (Docker)
 Using Docker allows you to quickly start an environment with all compilers and CLI tools ready.
 
 ```bash
@@ -51,7 +50,7 @@ For running directly on macOS or similar environments:
 4. Check `acc` configuration referring to `atcoder-cli-nodejs/config.json`.
 
 
-## 📖 Usage (Workflow)
+## Usage
 
 Basic flow when starting a new problem:
 
@@ -71,6 +70,6 @@ Basic flow when starting a new problem:
    acc submit  # Submit solution. If submission fails due to AtCoder's restrictions, submit via the web GUI.
    ```
 
-## 💡 Notes
+## Notes
 - C++ templates are configured to include `ac-library` via relative paths (`../../ac-library`).
 - The Python environment is managed with `uv`, and `ac-library-python` is already installed.

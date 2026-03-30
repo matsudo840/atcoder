@@ -11,9 +11,8 @@ using mint = modint998244353;
 
 int main()
 {
+    int X;
+    cin >> X;
 
-
-
-
-
+    cout << X * X * X << endl;
 }

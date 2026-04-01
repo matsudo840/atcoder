@@ -11,13 +11,9 @@ using mint = modint998244353;
 
 int main()
 {
-    int N;
-    cin >> N;
 
-    ll ans = 1;
-    for (int i = 1; i <= N; i++)
-    {
-        ans *= i;
-    }
-    cout << ans << endl;
+
+
+
+
 }

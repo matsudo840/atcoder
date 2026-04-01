@@ -11,9 +11,9 @@ using mint = modint998244353;
 
 int main()
 {
+    int H;
+    cin >> H;
 
-
-
-
-
+    double ans = sqrt(H * (12800000.0 + H));
+    cout << fixed << setprecision(7) << ans << endl;
 }

@@ -11,9 +11,27 @@ using mint = modint998244353;
 
 int main()
 {
+    int N;
+    cin >> N;
 
+    vector<int> A(N);
+    rep(i, N) cin >> A.at(i);
 
+    bool result = false;
+    for (int i = 0; i < N - 2; i++)
+        for (int j = i + 1; j < N - 1; j++)
+            for (int k = j + 1; k < N; k++)
+            {
+                {
+                    {
+                        if (A.at(i) + A.at(j) + A.at(k) == 1000)
+                            result = true;
+                    }
+                }
+            }
 
-
-
+    if (result)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
 }

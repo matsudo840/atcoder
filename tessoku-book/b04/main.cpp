@@ -11,9 +11,17 @@ using mint = modint998244353;
 
 int main()
 {
+    string N;
+    cin >> N;
 
+    reverse(all(N));
 
-
-
-
+    int ans = 0;
+    int digit = 1;
+    for (int i = 0; i < N.size(); i++)
+    {
+        ans += (N.at(i) - '0') * digit;
+        digit *= 2;
+    }
+    cout << ans << endl;
 }

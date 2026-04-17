@@ -11,9 +11,14 @@ using mint = modint998244353;
 
 int main()
 {
+    int N;
+    cin >> N;
 
+    vector<int> A(N);
+    rep(i, N) cin >> A.at(i);
 
+    sort(all(A));
+    reverse(all(A));
 
-
-
+    cout << A.at(0) + A.at(1) << endl;
 }

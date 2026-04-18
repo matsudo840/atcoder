@@ -11,9 +11,33 @@ using mint = modint998244353;
 
 int main()
 {
+    int N, S;
+    cin >> N >> S;
 
+    vector<int> A(N);
+    rep(i, N) cin >> A.at(i);
 
+    set<int> myset;
+    myset.insert(0);
 
+    string ans = "No";
+    for (int i = 0; i < N; i++)
+    {
+        set<int> myset2;
+        for (const auto &element : myset)
+        {
+            myset2.insert(element);
 
+            if (element + A.at(i) < S)
+                myset2.insert(element + A.at(i));
 
+            if (element + A.at(i) == S)
+            {
+                cout << "Yes" << endl;
+                return (0);
+            }
+        }
+        myset = myset2;
+    }
+    cout << "No" << endl;
 }

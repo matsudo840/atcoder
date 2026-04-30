@@ -12,8 +12,15 @@ using mint = modint998244353;
 int main()
 {
 
+    int N, X, Y;
+    cin >> N >> X >> Y;
 
+    int ans = 0;
+    for (int i = 1; i <= N; i++)
+    {
+        if (i % X == 0 || i % Y == 0)
+            ans++;
+    }
 
-
-
+    cout << ans << endl;
 }

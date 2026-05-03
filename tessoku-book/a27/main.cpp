@@ -11,9 +11,25 @@ using mint = modint998244353;
 
 int main()
 {
+    int A, B, tmp;
+    cin >> A >> B;
 
+    while (true)
+    {
+        // 必ずAが大きくなるようにする
+        if (A < B)
+        {
+            tmp = A;
+            A = B;
+            B = tmp;
+        }
 
+        if (A % B == 0)
+        {
+            cout << B << endl;
+            return 0;
+        }
 
-
-
+        A -= B;
+    }
 }

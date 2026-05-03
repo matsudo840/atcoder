@@ -11,9 +11,22 @@ using mint = modint998244353;
 
 int main()
 {
+    int Q;
+    cin >> Q;
 
+    for (int i = 0; i < Q; i++)
+    {
+        string ans = "Yes";
+        int X;
+        cin >> X;
 
+        int x = sqrt(X);
 
-
-
+        for (int j = 2; j <= x; j++)
+        {
+            if (X % j == 0)
+                ans = "No";
+        }
+        cout << ans << endl;
+    }
 }

@@ -11,9 +11,24 @@ using mint = modint998244353;
 
 int main()
 {
+    int N;
+    cin >> N;
 
+    ll ans = 0;
+    for (int i = 0; i < N; i++)
+    {
+        char sign;
+        int a;
+        cin >> sign >> a;
 
+        if (sign == '+')
+            ans += a;
+        else if (sign == '-')
+            ans -= a;
+        else if (sign == '*')
+            ans *= a;
 
-
-
+        cout << ans % 10000 << endl;
+        ans %= 1'000'000'000;
+    }
 }

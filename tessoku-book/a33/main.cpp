@@ -11,9 +11,21 @@ using mint = modint998244353;
 
 int main()
 {
+    int N;
+    cin >> N;
 
+    int ans;
 
+    cin >> ans; // A1
+    for (int i = 2; i <= N; i++)
+    {
+        int a;
+        cin >> a;
+        ans = ans ^ a;
+    }
 
-
-
+    if (ans != 0)
+        cout << "First" << endl; // ニム和が0以外だと先手必勝
+    else
+        cout << "Second" << endl; // ニム和が0だと後手必勝
 }

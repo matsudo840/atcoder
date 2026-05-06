@@ -11,9 +11,11 @@ using mint = modint998244353;
 
 int main()
 {
+    int N, K;
+    cin >> N >> K;
 
-
-
-
-
+    if ((K - N) % 2 == 1)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
 }

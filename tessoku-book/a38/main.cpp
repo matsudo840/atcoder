@@ -11,9 +11,23 @@ using mint = modint998244353;
 
 int main()
 {
+    int D, N;
+    cin >> D >> N;
 
+    vector<int> days(366); // 1-indexed, 0は使わない。
+    for (int i = 1; i <= D; i++)
+        days.at(i) = 24;
 
+    for (int i = 1; i <= N; i++)
+    {
+        int L, R, H;
+        cin >> L >> R >> H;
+        for (int j = L; j <= R; j++)
+            days.at(j) = min(days.at(j), H);
+    }
 
-
-
+    int ans = 0;
+    for (int i = 1; i <= D; i++)
+        ans += days.at(i);
+    cout << ans << endl;
 }

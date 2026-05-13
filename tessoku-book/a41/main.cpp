@@ -11,9 +11,17 @@ using mint = modint998244353;
 
 int main()
 {
+    int N;
+    cin >> N;
 
+    string S;
+    cin >> S;
 
-
-
-
+    string ans = "No";
+    for (int i = 0; i < N - 2; i++)
+    {
+        if (S.at(i) == S.at(i + 1) && S.at(i) == S.at(i + 2))
+            ans = "Yes";
+    }
+    cout << ans << endl;
 }

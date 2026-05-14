@@ -11,9 +11,21 @@ using mint = modint998244353;
 
 int main()
 {
+    int N, L;
+    cin >> N >> L;
 
+    int ans = 0;
+    for (int i = 0; i < N; i++)
+    {
+        int A;
+        char B;
+        cin >> A >> B;
 
+        if (B == 'W')
+            ans = max(ans, A);
+        else
+            ans = max(ans, L - A);
+    }
 
-
-
+    cout << ans << endl;
 }

@@ -14,12 +14,11 @@ int main()
     int Q;
     cin >> Q;
 
+    stack<string> S;
     for (int i = 1; i <= Q; i++)
     {
         int q;
         cin >> q;
-
-        stack<string> S;
 
         if (q == 1)
         {

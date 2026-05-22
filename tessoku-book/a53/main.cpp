@@ -11,9 +11,24 @@ using mint = modint998244353;
 
 int main()
 {
+    int Q;
+    cin >> Q;
 
+    priority_queue<int, vector<int>, greater<int>> S;
+    for (int i = 1; i <= Q; i++)
+    {
+        int q;
+        cin >> q;
 
-
-
-
+        if (q == 1)
+        {
+            int s;
+            cin >> s;
+            S.push(s);
+        }
+        if (q == 2)
+            cout << S.top() << endl;
+        if (q == 3)
+            S.pop();
+    }
 }

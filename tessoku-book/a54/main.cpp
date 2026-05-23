@@ -11,9 +11,27 @@ using mint = modint998244353;
 
 int main()
 {
+    int Q;
+    cin >> Q;
 
+    map<string, int> M;
+    for (int i = 1; i <= Q; i++)
+    {
+        int q;
+        cin >> q;
 
-
-
-
+        if (q == 1)
+        {
+            string x;
+            int y;
+            cin >> x >> y;
+            M[x] = y;
+        }
+        if (q == 2)
+        {
+            string x;
+            cin >> x;
+            cout << M[x] << endl;
+        }
+    }
 }
